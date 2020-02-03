@@ -11,10 +11,10 @@
 
 int fd;
 const unsigned char zi[];
-const unsigned char zi1[];
+//const unsigned char zi1[];
 unsigned char yi[4][16] = {
     "                ",
-    "                ",
+    "   ¿¿         ",
     " 	             ",  //µÚÈıĞĞ
     "   	     "   //µÚËÄĞĞ
 };                       //ÏÔÊ¾ÄÚÈİ
@@ -106,14 +106,8 @@ int main(){
 		delay(100);
 	}
 }
-const unsigned char zi[] =  {
 
-
-	 0x40,0xCC,0x40,0x48,0x7C,0x58,0x58,0x00,0x00,0x3F,0x08,0x7F,0x0D,0x4D,0x7F,0x00,/*"¿",0*/
- /* (8 X 16 , ¿¿ )*/
-
-};
-const unsigned char zi1[] = {
+const unsigned char zi[] = {
     /*--  ÎÄ×Ö:     --*/
     /*--  ËÎÌå12;  ´Ë×ÖÌåÏÂ¶ÔÓ¦µÄµãÕóÎª£º¿íx¸ß=8x16   --*/
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,

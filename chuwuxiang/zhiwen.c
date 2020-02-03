@@ -125,10 +125,10 @@ int PS_Empty(int fd){
 	return str[9];
 }
 
-int main(){
+int zhiwen(int flag){
 	int fd;
 	int buf;
-	int flag=1;
+	
 	if(wiringPiSetup()<0){
 		printf("init sys fail\n");
 		return -1;
@@ -146,8 +146,7 @@ int main(){
 	   if(PS_StoreChar(fd)==0x00){
 	    printf("用户注册成功，开箱\n");
 	   }else printf("存储模板失败\n");
-	  }else printf("已有存放\n");
-	  
+	  }else printf("已有存放\n"); 
 	 }else printf("生成特征失败\n");
    	}else printf("录入图像失败\n");
 
