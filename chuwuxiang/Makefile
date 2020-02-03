@@ -1,2 +1,2 @@
 a:	
-	gcc main.c duoji.c voice.c server.c chaoshengbo.c oled.c -lwiringPi -lpthread -g
+	gcc main.c duoji.c zhiwen.c server.c chaoshengbo.c -lwiringPi -lpthread -g

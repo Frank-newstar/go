@@ -128,7 +128,7 @@ int PS_Empty(int fd){
 int zhiwen(int flag){
 	int fd;
 	int buf;
-	
+	int a;	
 	if(wiringPiSetup()<0){
 		printf("init sys fail\n");
 		return -1;
@@ -139,16 +139,23 @@ int zhiwen(int flag){
 	}
 	if(PS_GetImage(fd)==0x00){
 	 if(PS_GenChar(fd)==0x00){
-	  if(PS_Search(fd)==0x00){
-	   printf("open\n");
-	   while(PS_Empty(fd)!=0x00);
+	  if(flag==1){
+	   if(PS_Search(fd)==0x00){
+	    printf("open\n");
+	    PS_Empty(fd);
+	    a=0;
+	    return a;
+	   }
 	  }else if(flag==0){
 	   if(PS_StoreChar(fd)==0x00){
 	    printf("用户注册成功，开箱\n");
+	    a=1;
+	    return a;
 	   }else printf("存储模板失败\n");
 	  }else printf("已有存放\n"); 
 	 }else printf("生成特征失败\n");
    	}else printf("录入图像失败\n");
 
-	return 0;
-}	
+	return -1;
+}
+
