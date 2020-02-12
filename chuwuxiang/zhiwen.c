@@ -26,11 +26,6 @@ int PS_GetImage(int fd){
 		read(fd,pstr,1);
 		pstr++;
 	}
-
-	for(i=0;i<12;i++){
-		printf("%02X",str[i]);
-	}
-	printf("\n");
 	return str[9];
 }
 
