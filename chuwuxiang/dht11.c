@@ -64,36 +64,23 @@ uint8 readSensorData(void)
 int dht11 ()  
 {  
 
-	/*
-	if (-1 == wiringPiSetup()) {  
-		printf("Setup wiringPi failed!");  
-		return 1;  
-	} */ 
 
 	pinMode(pinNumber, OUTPUT); // set mode to output  
 	digitalWrite(pinNumber, 1); // output a high level   
-
-
-  
+	
 		pinMode(pinNumber,OUTPUT); // set mode to output  
 		digitalWrite(pinNumber, 1); // output a high level   
-	
 		
 	  while(1){	
 		  delay(1000);
-		if(readSensorData()){  
-			
+		if(readSensorData()){  		
 			return databuf;
-		      	
 		}  
 		else  
 		{ 
-					
-			printf("Sorry! Sensor dosent ans!\n"); 
-		       		
+			printf("Sorry! Sensor dosent ans!\n");      		
 			databuf=0;  
 		} 
-		
 	  }
 	return 0;  
 } 
