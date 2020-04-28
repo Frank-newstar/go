@@ -74,7 +74,7 @@ while(1){
 		//开灯
 	}else if((*y_cmd==0x04||*s_cmd==4)&&(cmd!=4)){
 		cmd=4;
-		f=popen("python oled.py 关门","r");
+		f=popen("python oled.py 关灯","r");
 		pclose(f);
 		jdq(light,0);
 		//关灯
